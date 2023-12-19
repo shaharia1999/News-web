@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  const Tg=()=>{
+   let btn= document.documentElement.classList.toggle('dark');
+   console.log(btn);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" dark:bg-black bg-red-500 font-bold" >
+      shaharia
+
+      <button className="px-5 py-2 bg-green text-white" onClick={Tg}>Toggle</button>
     </div>
+    
   );
 }
 
