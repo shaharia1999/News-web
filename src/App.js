@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="flex">
       
-      <div className={`md:fixed lg:relative`}>
+      <div className={`md:fixed lg:relative hidden`}>
         
         <div
           className={`h-screen lg:h-full relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
@@ -131,8 +131,8 @@ function App() {
         </div>
       </div>
 {/* main */}
-      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full pl-10 pr-7 pt-5 py-10 "> 
-       <div className="flex justify-between items-center  h-24 py-18">
+      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full lg:pl-10 pl-0 md:pr-7 md:pt-5 md:py-10  "> 
+       <div className="flex justify-between items-center  bg-[#FF797B] md:bg-transparent">
           <p className="text-[24px] text-[#646F75] dark:text-white">Home</p>
           <div className="flex justify-center gap-3 ">
             <div className="flex justify-center items-center">
@@ -170,7 +170,7 @@ function App() {
                   
                  </div>
             </article>
-            <div className="grid grid-cols-4 py-10 gap-4">
+            <div className="grid md:grid-cols-4 grid-cols-2 py-10 gap-4">
             <article className="shadow-md rounded-md px-5 py-2 dark:bg-[#2B2121]">
               <div>
                 <img  alt='love' src={love} />
