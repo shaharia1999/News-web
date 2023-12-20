@@ -32,9 +32,11 @@ function App() {
 
   return (
     <div className="flex">
-      <div>
+      
+      <div className={`md:fixed lg:relative`}>
+        
         <div
-          className={`h-screen relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
+          className={`h-screen lg:h-full relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
             hide ? "w-96" : "w-20"
           }`}
         >
@@ -128,9 +130,9 @@ function App() {
           </div>
         </div>
       </div>
-
-      <div className=" dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full pl-10 pr-7 pt-5 ">
-        <div className="flex justify-between items-center  h-24 py-18">
+{/* main */}
+      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full pl-10 pr-7 pt-5  "> 
+       <div className="flex justify-between items-center  h-24 py-18">
           <p className="text-[24px] text-[#646F75] dark:text-white">Home</p>
           <div className="flex justify-center gap-3 ">
             <div className="flex justify-center items-center">
@@ -156,8 +158,8 @@ function App() {
           </div>
         </div>
         {/* Content Div */}
-        <div className="grid grid-cols-12 gap-x-28" >
-          <div className="col-span-7 ">
+        <div className={` ${hide?'lg:gap-x-14 lg:grid lg:grid-cols-12':'lg:gap-x-28 lg:grid lg:grid-cols-12'}`} >
+          <div className="lg:col-span-7 ">
             <article className="bg-gradient-to-r from-[#FF797B] via-[#FF7C65] to-[#FF7C65] flex text-white ">
                  <div><img className=" h-[270px] w-[270px]"  alt="doctor" src={simple1}/></div>
                  <div className="flex justify-center items-center text-left flex-col w-full">
@@ -281,7 +283,9 @@ function App() {
           
   
           </div>
-          <div className="col-span-5 ">
+
+          
+           <div className="lg:col-span-5 ">
             <article>
             <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
               <h3 className="pb-4 text-2xl">Upcoming-Events</h3>
@@ -376,8 +380,8 @@ function App() {
               <p>T10 September 2022<br/> AM Thursday  10:00:00 AM</p>
               </div>
             <article className="bg-gradient-to-r  flex px-2 ">
-                 <div><img className=" h-[270px] w-[270px]"  alt="doctor" src={simple2}/></div>
-                 <div className="flex justify-center items-center text-left bg-gradient-to-r text-white from-[#FF797B] via-[#FF7C65] to-[#FF7C65] flex-col w-full ">
+                 <div className=""><img className=" h-[270px] w-[270px] "  alt="doctor" src={simple2}/></div>
+                 <div className="flex justify-center items-center text-left bg-gradient-to-r text-white from-[#FF797B] via-[#FF7C65] to-[#FF7C65] flex-col w-full rounded-md ">
                 <h3 className="text-2xl text-center">Infection Number <br/><span>500</span></h3>
                 <h3 className="text-2xl text-center mt-4">Infection Ratio <br/><span>10%</span></h3>
     
@@ -385,7 +389,7 @@ function App() {
                  </div>
             </article>
             </article>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
