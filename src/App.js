@@ -131,7 +131,7 @@ function App() {
         </div>
       </div>
 {/* main */}
-      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full pl-10 pr-7 pt-5  "> 
+      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full pl-10 pr-7 pt-5 py-10 "> 
        <div className="flex justify-between items-center  h-24 py-18">
           <p className="text-[24px] text-[#646F75] dark:text-white">Home</p>
           <div className="flex justify-center gap-3 ">
@@ -226,7 +226,8 @@ function App() {
             </div>
 
             {/* Todo List  */}
-            <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
+            <div className="md:flex md:gap-x-3">
+            <div className="bg-white dark:bg-[#2c2121] px-5 py-3 md:w-1/2 lg:w-full">
               <h3 className="pb-4 text-2xl">To-Do List</h3>
               <article className="flex justify-between gap-x-2">
                 <textarea className="w-10/12"></textarea>
@@ -279,6 +280,96 @@ function App() {
                 </ul>
               </article>
 
+              </div>
+              <article className="lg:hidden md:block">
+            <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
+              <h3 className="pb-4 text-2xl">Upcoming-Events</h3>
+           
+              <article className="mt-5">
+                <ul>
+                  <li className="flex justify-between items-center dark:bg-[#6a5050]  bg-[#FDDAD6] rounded-lg border mt-5">
+                    <div className="flex justify-center items-center">
+                    <div className="bg-white dark:bg-[#2c2121] px-3 py-2 rounded-md">
+                      <p>2022</p>
+                      <p>23</p>
+                      <p>Sep</p>
+                    </div>
+                    <div className="px-2 py-1">
+                    <p className="font-medium">Dr. Muhammad Abdul Hussein </p>
+                    <p>Cardiologist </p>
+                    <div className="flex gap-2 oy-4">
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md"> Start Morning</button>
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md">Time 10:00 AM</button>
+                    </div>
+                    </div>
+                  
+                    </div>
+                
+                  </li>
+                  <li className="flex justify-between items-center dark:bg-[#6a5050]  bg-[#FDDAD6] rounded-lg border mt-5">
+                    <div className="flex justify-center items-center">
+                    <div className="bg-white dark:bg-[#2c2121] px-3 py-2 rounded-md">
+                      <p>2022</p>
+                      <p>23</p>
+                      <p>Sep</p>
+                    </div>
+                    <div className="px-2 py-1">
+                    <p className="font-medium">Dr. Muhammad Abdul Hussein </p>
+                    <p>Cardiologist </p>
+                    <div className="flex gap-2 oy-4">
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md"> Start Morning</button>
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md">Time 10:00 AM</button>
+                    </div>
+                    </div>
+                  
+                    </div>
+                
+                  </li>
+                  <li className="flex justify-between items-center dark:bg-[#6a5050]  bg-[#FDDAD6] rounded-lg border mt-5">
+                    <div className="flex justify-center items-center">
+                    <div className="bg-white dark:bg-[#2c2121] px-3 py-2 rounded-md">
+                      <p>2022</p>
+                      <p>23</p>
+                      <p>Sep</p>
+                    </div>
+                    <div className="px-2 py-1">
+                    <p className="font-medium">Dr. Muhammad Abdul Hussein </p>
+                    <p>Cardiologist </p>
+                    <div className="flex gap-2 oy-4">
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md"> Start Morning</button>
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md">Time 10:00 AM</button>
+                    </div>
+                    </div>
+                  
+                    </div>
+                
+                  </li>
+                  <li className="flex justify-between items-center dark:bg-[#6a5050]  bg-[#FDDAD6] rounded-lg border mt-5">
+                    <div className="flex justify-center items-center">
+                    <div className="bg-white dark:bg-[#2c2121] px-3 py-2 rounded-md">
+                      <p>2022</p>
+                      <p>23</p>
+                      <p>Sep</p>
+                    </div>
+                    <div className="px-2 py-1">
+                    <p className="font-medium">Dr. Muhammad Abdul Hussein </p>
+                    <p>Cardiologist </p>
+                    <div className="flex gap-2 oy-4">
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md"> Start Morning</button>
+                      <button className="bg-white dark:bg-[#2c2121] px-2 p-1 rounded-md">Time 10:00 AM</button>
+                    </div>
+                    </div>
+                  
+                    </div>
+                
+                  </li>
+              
+                 
+                </ul>
+              </article>
+
+            </div>
+            </article>
             </div>
           
   
@@ -286,7 +377,7 @@ function App() {
 
           
            <div className="lg:col-span-5 ">
-            <article>
+            <article className="md:hidden lg:block">
             <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
               <h3 className="pb-4 text-2xl">Upcoming-Events</h3>
            
