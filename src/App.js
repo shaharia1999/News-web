@@ -281,7 +281,7 @@ function App() {
               </article>
 
               </div>
-              <article className="lg:hidden md:block">
+              <article className="lg:hidden md:block ">
             <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
               <h3 className="pb-4 text-2xl">Upcoming-Events</h3>
            
