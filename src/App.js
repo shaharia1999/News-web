@@ -24,6 +24,7 @@ import { AiOutlineDown } from "react-icons/ai";
 function App() {
   const [hide, setHide] = useState(true);
   const [darks, setDarks] = useState(false);
+  const [responsive, setResponsive] = useState(false);
   const Tg = () => {
     let btn = document.documentElement.classList.toggle("dark");
     console.log(btn);
@@ -31,13 +32,12 @@ function App() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex relative">
       
-      <div className={`md:fixed lg:relative hidden`}>
-        
+      <div className={`fixed  lg:h-screen lg:sticky top-0 left-0  dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] h-auto`}>
         <div
-          className={`h-screen lg:h-full relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
-            hide ? "w-96" : "w-20"
+          className={`h-screen ${responsive?'block':'hidden'} md:block   relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
+            hide ? " w-64 md:w-96" : "w-20"
           }`}
         >
           {hide ? (
@@ -48,8 +48,12 @@ function App() {
                 Medi<span className="text-[#FF7594]">Doc</span>
               </p>
               <AiOutlineArrowLeft
-                className="bg-white text-[#FF7594] w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
+                className="bg-white md:block hidden text-[#FF7594] w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
                 onClick={() => setHide((prev) => !prev)}
+              />
+              <AiOutlineArrowLeft
+                className="bg-white block md:hidden text-[#FF7594] w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
+                onClick={() => setResponsive((prev) => !prev)}
               />
             </div>
           ) : (
@@ -111,9 +115,9 @@ function App() {
               </li>
             </ul>
           </div>
-          <div className="absolute bottom-28  w-full flex justify-center">
+          <div className="absolute bottom-3  w-full flex justify-center">
             {hide ? (
-              <p className="text-16px  bg-gradient-to-r w-auto from-[#FF797B] rounded-md to-[#FF797B] px-8 py-3 text-white ">
+              <p className="text-16px  bg-gradient-to-r w-auto from-[#FF797B] rounded-md to-[#FF797B] px-5 py-2 text-white ">
                 New appointment
               </p>
             ) : (
@@ -132,8 +136,10 @@ function App() {
       </div>
 {/* main */}
       <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full lg:pl-10 pl-0 md:pr-7 md:pt-5 md:py-10  "> 
-       <div className="flex justify-between items-center  bg-[#FF797B] md:bg-transparent">
-          <p className="text-[24px] text-[#646F75] dark:text-white">Home</p>
+       <div className="flex justify-between items-center  bg-[#FF797B] md:bg-transparent px-2 py-2">
+          <div className="flex justify-center items-center ">
+          <GiHamburgerMenu className="text-[white] text-2xl font-medium mr-2 md:hidden" onClick={()=>setResponsive(prev=>!prev)} />
+          <p className="text-[24px] text-[#646F75] dark:text-white">Home</p></div>
           <div className="flex justify-center gap-3 ">
             <div className="flex justify-center items-center">
               <img
