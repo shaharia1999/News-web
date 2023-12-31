@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="flex relative">
       
-      <div className={`fixed  lg:h-screen lg:sticky top-0 left-0  dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] h-auto`}>
+      <div className={`fixed  lg:h-screen lg:sticky top-0 left-0 z-50  dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] h-auto`}>
         <div
           className={`h-screen ${responsive?'block':'hidden'} md:block   relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
             hide ? " w-64 md:w-96" : "w-20"
@@ -42,17 +42,17 @@ function App() {
         >
           {hide ? (
             <div className="flex px-10 items-center relative pt-20">
-              <AiFillSafetyCertificate className="text-[#FF7594] text-4xl font-medium " />
+              <AiFillSafetyCertificate className="text-[#E91802] dark:text-[#FF7594] text-4xl font-medium " />
               <p className="text-[24px] ">
                 {" "}
-                Medi<span className="text-[#FF7594]">Doc</span>
+                Medi<span className="text-[#E91802] dark:text-[#FF7594] ">Doc</span>
               </p>
               <AiOutlineArrowLeft
-                className="bg-white md:block hidden text-[#FF7594] w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
+                className="bg-white md:block hidden text-[#E91802] dark:text-[#FF7594]  w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
                 onClick={() => setHide((prev) => !prev)}
               />
               <AiOutlineArrowLeft
-                className="bg-white block md:hidden text-[#FF7594] w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
+                className="bg-white block md:hidden text-[#E91802] dark:text-[#FF7594]  w-8 h-8 cursor-pointer shadow-lg rounded-full absolute right-[-10px]"
                 onClick={() => setResponsive((prev) => !prev)}
               />
             </div>
@@ -63,7 +63,7 @@ function App() {
               } gap-4 py-4 pt-10`}
             >
               <GiHamburgerMenu
-                className="text-[#FF7594] text-3xl font-medium cursor-pointer "
+                className="text-[#E91802] dark:text-[#FF7594]  text-3xl font-medium cursor-pointer "
                 onClick={() => setHide((prev) => !prev)}
               />
             </li>
@@ -76,8 +76,8 @@ function App() {
                   !hide && "justify-center"
                 } gap-4 py-4`}
               >
-                <TiHome className="text-[#FF7594] text-3xl font-medium " />
-                {hide && <p className="text-16px text-[#FF7594]">Home</p>}
+                <TiHome className="text-[#E91802] dark:text-[#FF7594]  text-3xl font-medium " />
+                {hide && <p className="text-16px text-[#E91802] dark:text-[#FF7594] ">Home</p>}
               </li>
               <li
                 className={`flex  items-center ${
@@ -117,7 +117,7 @@ function App() {
           </div>
           <div className="absolute bottom-3  w-full flex justify-center">
             {hide ? (
-              <p className="text-16px  bg-gradient-to-r w-auto from-[#FF797B] rounded-md to-[#FF797B] px-5 py-2 text-white ">
+              <p className="text-16px  dark:bg-[#FF797B] bg-[#E91802]  w-auto  rounded-md  px-5 py-2 text-white ">
                 New appointment
               </p>
             ) : (
@@ -135,8 +135,8 @@ function App() {
         </div>
       </div>
 {/* main */}
-      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full lg:pl-10 pl-0 md:pr-7 md:pt-5 md:py-10  "> 
-       <div className="flex justify-between items-center  bg-[#FF797B] md:bg-transparent px-2 py-2">
+      <div className="md:pl-28  dark:bg-[#150A09] dark:text-white bg-[#F9F9F9] w-full lg:pl-10 pl-0 md:pr-7 md:pt-0 md:py-10  "> 
+       <div className="flex justify-between items-center  bg-[#FF797B] md:bg-[#F9F9F9] dark:md:bg-[#150A09] px-2 py-2 sticky top-0 left-0">
           <div className="flex justify-center items-center ">
           <GiHamburgerMenu className="text-[white] text-2xl font-medium mr-2 md:hidden" onClick={()=>setResponsive(prev=>!prev)} />
           <p className="text-[24px] text-[#646F75] dark:text-white">Home</p></div>
@@ -168,9 +168,9 @@ function App() {
           <div className="lg:col-span-7 ">
             <article className="bg-gradient-to-r from-[#FF797B] via-[#FF7C65] to-[#FF7C65] flex text-white ">
                  <div><img className=" h-[270px] w-[270px]"  alt="doctor" src={simple1}/></div>
-                 <div className="flex justify-center items-center text-left flex-col w-full">
+                 <div className="flex justify-center items-center  flex-col w-full text-center">
                 <h3 className="text-2xl">Hello, Mary Jane!</h3>
-                <p>Stay Up-to-Date with your appointments.</p> 
+                <p className="text-center">Stay Up-to-Date with your appointments.</p> 
                 <p>You Have No pending Reports</p> 
                   
                   
@@ -238,7 +238,7 @@ function App() {
               <article className="flex justify-between gap-x-2">
                 <textarea className="w-10/12"></textarea>
                 <div className="">
-                <button className="bg-[#FF797B] w-28 py-1 font-medium text-white rounded-md">Add</button>
+                <button className="dark:bg-[#FF797B] bg-[#f65644]  w-28 py-1 font-medium text-white rounded-md">Add</button>
                 </div>
                 
               </article>
@@ -246,13 +246,13 @@ function App() {
                 
                  <div className="flex justify-center items-center"><FaCheckSquare className="text-[#EDEBEB] text-3xl mr-3" />
                  <p>Select All</p></div>
-                 <div><button className="bg-[#FF797B] w-28 py-1 font-medium text-white rounded-md">Done</button></div>
+                 <div><button className="dark:bg-[#FF797B] bg-[#f65644]  w-28 py-1 font-medium text-white rounded-md">Done</button></div>
               </article>
               <article className="mt-10">
                 <ul>
                   <li className="flex justify-between items-center py-1">
                     <div className="flex justify-center items-center">
-                    <FaCheckSquare className="text-[#FF797B] text-3xl mr-3" />
+                    <FaCheckSquare className=" dark:text-[#FF797B] text-[#f65644]  text-3xl mr-3" />
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                     </div>
                  
