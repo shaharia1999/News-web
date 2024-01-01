@@ -12,7 +12,7 @@ import { FaPlus } from "react-icons/fa";
 import { useState } from "react";
 import light from "../src/Images/Toggle button.png";
 import dark from "../src/Images/Toggle button (1).png";
-import simple1 from "../src/Images/Svg_sample1.png";
+import simple1 from "../src/Images/japan.jpg";
 import simple2 from "../src/Images/Svg_sample2.png";
 import avatar from "../src/Images/Avatar.png";
 import love from "../src/Images/Frame 2846.png";
@@ -20,6 +20,7 @@ import love1 from "../src/Images/Frame 2846 (3).png";
 import love2 from "../src/Images/Frame 2846 (2).png";
 import love3 from "../src/Images/Frame 2846 (1).png";
 import { AiOutlineDown } from "react-icons/ai";
+import './App.css'
 
 function App() {
   const [hide, setHide] = useState(true);
@@ -37,7 +38,7 @@ function App() {
       <div className={`fixed  lg:h-screen lg:sticky top-0 left-0 z-50  dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] h-auto`}>
         <div
           className={`h-screen ${responsive?'block':'hidden'} md:block   relative dark:bg-[#2E1619] dark:text-white bg-[#FFFFFF] ${
-            hide ? " w-64 md:w-96" : "w-20"
+            hide ? " w-64 md:w-72" : "w-20"
           }`}
         >
           {hide ? (
@@ -164,14 +165,14 @@ function App() {
           </div>
         </div>
         {/* Content Div */}
-        <div className={` ${hide?'lg:gap-x-14 lg:grid lg:grid-cols-12':'lg:gap-x-28 lg:grid lg:grid-cols-12'}`} >
-          <div className="lg:col-span-7 ">
-            <article className="bg-gradient-to-r from-[#FF797B] via-[#FF7C65] to-[#FF7C65] flex text-white ">
-                 <div><img className=" h-[270px] w-[270px]"  alt="doctor" src={simple1}/></div>
-                 <div className="flex justify-center items-center  flex-col w-full text-center">
-                <h3 className="text-2xl">Hello, Mary Jane!</h3>
-                <p className="text-center">Stay Up-to-Date with your appointments.</p> 
-                <p>You Have No pending Reports</p> 
+        <div className={` ${hide?'lg:gap-x-8 lg:grid lg:grid-cols-12':'lg:gap-x-12 lg:grid lg:grid-cols-12'}`} >
+          <div className="lg:col-span-8 ">
+            <article className="bg-gradient-to-r   text-white relative ">
+                 <div className="m-0 p-0 w-full braking_img relative after:bg-slate-800"><img className=" h-[400px] w-[100%]"  alt="doctor" src={simple1}/></div>
+                 <div className="flex px-5 pb-3 absolute bottom-0 left-0 justify-center items-center  flex-col w-full ">
+                <a href='#' className="text-4xl text-shadow-md font-bold hover:text-green-400">Powerful quake in Japan tears down homes and triggers tsunami warnings</a>
+                <p className="">magnitude earthquake in Japan has caused homes to collapse, ripped up roads and triggered tsunami warnings for coastal areas</p> 
+                {/* <p>You Have No pending Reports</p>  */}
                   
                   
                  </div>
@@ -382,7 +383,7 @@ function App() {
           </div>
 
           
-           <div className="lg:col-span-5 ">
+           <div className="lg:col-span-4 ">
             <article className="md:hidden lg:block">
             <div className="bg-white dark:bg-[#2c2121] px-5 py-3">
               <h3 className="pb-4 text-2xl">Upcoming-Events</h3>
